@@ -1,0 +1,7265 @@
+{
+  "scope": "authored JSON wire model; no Kafka/Schema Registry/Avro execution",
+  "cases": 144,
+  "safe_failures": 0,
+  "semantic_violations": 24,
+  "structural_baseline_misses": 20,
+  "counterexample": {
+    "event": {
+      "amount": 1,
+      "currency": "JPY"
+    },
+    "path": [
+      1,
+      2
+    ],
+    "result": {
+      "status": "violation",
+      "structural_pass": true,
+      "violations": [
+        "net_minor"
+      ],
+      "expected": {
+        "currency": "JPY",
+        "net_minor": 1,
+        "customer": ""
+      },
+      "observed": {
+        "currency": "JPY",
+        "net_minor": 100,
+        "customer": ""
+      },
+      "wire_event": {
+        "amount": 100,
+        "currency": "JPY",
+        "customer_id": "",
+        "discount": null
+      }
+    },
+    "minimality": "greedy field/value/internal-path reductions; not global minimum"
+  },
+  "matrix": [
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 100000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 100000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 100000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 100000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 100000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 100000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 100000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 100000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "USD",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 80000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 80000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 80000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 80000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 80000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 80000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 80000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor",
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 80000,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "discount": 200,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "USD",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "USD",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "USD",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 1000,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "unsupported",
+        "reason": "v1 cannot exactly represent fractional major units"
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "unsupported",
+        "reason": "v1 cannot exactly represent fractional major units"
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": null,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "JPY",
+      "discount": null,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": null
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 800,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 1000,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 200
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "unsupported",
+        "reason": "v1 cannot exactly represent fractional major units"
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": "buyer-7"
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "unsupported",
+        "reason": "v1 cannot exactly represent fractional major units"
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "net_minor"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 10,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": null
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer_id": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "violation",
+        "structural_pass": true,
+        "violations": [
+          "customer"
+        ],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": ""
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "discount": 2,
+          "customer_id": ""
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "none",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "units",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "identity",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 3,
+      "currency": "JPY",
+      "discount": 2,
+      "defect": "discount",
+      "result": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      },
+      "structural_only": {
+        "status": "pass",
+        "structural_pass": true,
+        "violations": [],
+        "expected": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "observed": {
+          "currency": "JPY",
+          "net_minor": 8,
+          "customer": "buyer-7"
+        },
+        "wire_event": {
+          "amount": 10,
+          "currency": "JPY",
+          "customer": "buyer-7",
+          "discount": 2
+        }
+      }
+    }
+  ],
+  "unsupported_controls": [
+    {
+      "status": "unsupported",
+      "reason": "unimplemented client/serialization format"
+    },
+    {
+      "status": "unsupported",
+      "reason": "client cannot execute migration rules"
+    }
+  ]
+}

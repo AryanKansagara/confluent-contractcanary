@@ -1,0 +1,9 @@
+{
+  "company": "Confluent",
+  "title": "ContractCanary",
+  "test_command": "python -m unittest discover -v",
+  "demo_command": "python contractcanary.py --output demo.json",
+  "scope": "Authored JSON-wire semantic migration laboratory; no Confluent/Kafka/Registry serializers",
+  "implemented": true,
+  "integration_status": "unverified"
+}
